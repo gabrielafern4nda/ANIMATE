@@ -10,20 +10,13 @@ body{
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background:#cbccce;
+  background:#cdcbce;
 }
 
 .container{
   display: flex;
 }
-
-.container .dynamic-txt{
-  margin-left: 15px;
-  height: 90px;
-  line-height: 90px;
-  overflow: hidden;
-}
-.dynamic-txt li{
+.dynamic-txt li{ /* texto*/
   list-style: none;
   color: #6d4da1;
   font-size: 60px;
@@ -33,16 +26,18 @@ body{
   animation: slide 12s steps(1) infinite;
   text-shadow:rgb(64, 14, 83) 0.1em 0.1em 0.2em;
 }
+
 @keyframes slide{
   100%{
     top: -360px;
   }
 }
- .dynamic-txt li span{
+.dynamic-txt li span{
   position: relative;
   margin: 5px 0;
   line-height: 80px;
  }
+ /*animação*/
  .dynamic-txt li span::after{
   content: '';
   position: absolute;
@@ -55,6 +50,7 @@ body{
   text-shadow:rgb(64, 14, 83) 0.1em 0.1em 0.2em;
 
  }
+ /*efeito escrita*/
  @keyframes animate{
   40%, 60%{
     left: calc(100% + 30px);
